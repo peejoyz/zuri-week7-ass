@@ -1,0 +1,29 @@
+
+GET http://localhost:8000/task HTTP/1.1
+
+
+### Adding a task to a todo collection
+POST http://localhost:8000/task HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Going to the bank",
+    "description": "I need to make some deposit"
+}
+
+
+### getting a single task
+GET http://localhost:8000/task/636b6f820f9cf94c415fc1d5 HTTP/1.1
+
+
+### Updating a particular todo task
+PUT http://localhost:8000/task/636b6fe3775730095758e9cd HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Gym",
+    "description": "Going to the gym today, so as to be in shape"
+}
+
+### delete todo task
+DELETE http://localhost:8000/task/636ca9201740e8cda99a62a0 HTTP/1.1
